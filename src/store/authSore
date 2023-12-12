@@ -1,0 +1,11 @@
+import {create} from 'zustand';
+
+// Definir el store
+const useUserStore = create((set) => ({
+  user: null, // Estado inicial del usuario
+  status: 'not-authenticated', // Estado inicial del status
+  setUser: (user) => set({ user }),
+  setStatus: (status) => set({ status }),
+}));
+
+export default useUserStore;
